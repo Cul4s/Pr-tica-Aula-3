@@ -1,0 +1,20 @@
+CREATE DATABASE produtos_db;
+
+USE produtos_db;
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    fornecedor VARCHAR(100) NOT NULL,
+    endereco_fornecedor VARCHAR(200) NOT NULL,
+    quantidade INT NOT NULL,
+    endereco VARCHAR(200) NOT NULL,
+    preco_unitario FLOAT NOT NULL
+);
+
+INSERT INTO produtos (nome, fornecedor, endereco_fornecedor, quantidade, endereco, preco_unitario) 
+VALUES 
+    ('Produto A', 'Fornecedor A', 'Rua A, 100', 10, 'Rua A, 200', 10.5),
+    ('Produto B', 'Fornecedor B', 'Rua B, 100', 20, 'Rua B, 200', 20.5),
+    ('Produto C', 'Fornecedor C', 'Rua C, 100', 30, 'Rua C, 200', 30.5),
+    ('Produto D', 'Fornecedor D', 'Rua D, 100', 40, 'Rua D, 200', 40.5);
